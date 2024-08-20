@@ -8,7 +8,7 @@ const config = {
   channelSecret: '4aaae9c98638131e2b3b78e546239bb4'
 };
 
-const client = new line.messagingApi.MessagingApiClient(config.channelAccessToken);
+const client = new line.messagingApi.MessagingApiClient({ channelAccessToken: config.channelAccessToken });
 
 app.use(line.middleware(config));
 
